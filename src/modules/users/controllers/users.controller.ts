@@ -8,7 +8,7 @@ export class UsersController {
     constructor(private service: UsersService) { }
 
     @Get(':id')
-    get(@Param() params) {
+    get(@Param() params: any) {
         return this.service.getUser(params.id);
     }
 
@@ -23,7 +23,7 @@ export class UsersController {
     }
 
     @Delete(':id')
-    deleteUser(@Param() params) {
+    deleteUser(@Param() params: any) {
       return this.service.deleteUser(params.id);
     }
 }
